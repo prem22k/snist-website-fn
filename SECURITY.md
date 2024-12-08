@@ -1,26 +1,48 @@
 # Security Policy
 
-This document concerns our club's general security policy for this project.
+This document outlines the security policy for Cloud Community Club (C³)'s website project.
 
-## 🛠️ Project-Specific Supported Versions
+## 🛠️ Supported Versions
 
-| Version                              | Supported          |
-| ------------------------------------ | ------------------ |
-| 'live' / Production                                | :white_check_mark: |
-| 'legacy'-marked builds               | 🚫                 |
+| Version | Supported |
+|---------|-----------|
+| Production (main branch) | ✅ |
+| Development branches | ✅ |
+| Legacy versions | ❌ |
 
-## ❗ Vulnerabilities
+## ❗ Vulnerability Management
 
-We rely on Dependabot and CodeQL in our repositories to monitor for new potential vulnerabilities in all pushes. 
+We employ several security measures to maintain the integrity of our codebase:
 
-However, we also have to account for cases that may fly-by that first automated line of defense.
+- **Automated Scanning**: We use GitHub's Dependabot and CodeQL for continuous security monitoring
+- **Regular Updates**: Dependencies are kept up-to-date to patch known vulnerabilities
+- **Code Review**: All pull requests undergo security review before merging
 
-### 🔐 Reporting a Vulnerability
+## 🔐 Reporting a Security Vulnerability
 
-If you believe you have found a security vulnerability, we encourage you to let us know right away.
+We take security issues seriously. If you discover a security vulnerability:
 
-We will investigate all legitimate reports and do our best to quickly resolve any and all problems.
+1. **DO NOT** create a public GitHub issue
+2. Email us immediately at security@cloudcommunityclub.in
+3. Include detailed information about the vulnerability
+4. If possible, provide steps to reproduce the issue
 
-To contact us, email `security@skycs.club` to privately disclose said potential vulnerabilities.
+For urgent matters, contact our team through:
+- Discord: [Join our Discord Server](https://discord.gg/YOUR_INVITE_LINK)
+- Email: security@cloudcommunityclub.in
 
-Urgent? Please contact us privately via our [Discord](https://discord.gg/z5P9kccwRh) to raise a more immediate resolution.
+We commit to:
+- Acknowledging your report within 24 hours
+- Providing regular updates on our progress
+- Notifying you when the issue is resolved
+- Crediting you in our security acknowledgments (unless you prefer to remain anonymous)
+
+## 🛡️ Security Best Practices
+
+When contributing to this project:
+1. Never commit sensitive information (API keys, credentials, etc.)
+2. Keep dependencies updated
+3. Follow our coding standards and security guidelines
+4. Report any suspicious activity immediately
+
+Thank you for helping keep C³ secure!

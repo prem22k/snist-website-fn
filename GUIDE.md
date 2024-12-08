@@ -1,72 +1,70 @@
-# 🗄️ Project Structure
+# 🗄️ C³ Project Structure
 
-Most of the code lives in the `src` folder and looks like this:
+Most of the code lives in the `src` folder and follows this structure:
 
 ```sh
 src
 |
-+-- assets            # assets folder can contain all the static files such as images, fonts, etc.
++-- assets            # static files such as images, fonts, logos, and club-related media
 |
-+-- components        # shared components used across the entire application
++-- components        # shared components used across the entire website
 |
-+-- config            # all the global configuration, env variables etc. get exported from here and used in the app
++-- config           # global configuration, environment variables, and theme settings
 |
-+-- features          # feature based modules
++-- features         # feature-based modules (events, membership, gallery, etc.)
 |
-+-- hooks             # shared hooks used across the entire application
++-- hooks            # shared React hooks used across the website
 |
-+-- lib               # re-exporting different libraries preconfigured for the application
++-- lib              # pre-configured libraries and third-party integrations
 |
-+-- providers         # all of the application providers
++-- providers        # application providers (auth, theme, etc.)
 |
-+-- routes            # routes configuration
++-- routes           # route configuration and page components
 |
-+-- stores            # global state stores
++-- stores           # global state management
 |
-+-- test              # test utilities and mock server
++-- types            # TypeScript type definitions
 |
-+-- types             # base types used across the application
-|
-+-- utils             # shared utility functions
++-- utils            # shared utility functions
 ```
 
-In order to scale the application in the easiest and most maintainable way, keep most of the code inside the `features` folder, which should contain different feature-based things. Every `feature` folder should contain domain specific code for a given feature. This will allow you to keep functionalities scoped to a feature and not mix its declarations with shared things. This is much easier to maintain than a flat folder structure with many files.
-
-A feature could have the following structure:
+To maintain scalability and organization, most feature-specific code should live in the `features` folder. Each feature represents a distinct section or functionality of the C³ website. For example:
 
 ```sh
-src/features/awesome-feature
+src/features/events
 |
-+-- api         # exported API request declarations and api hooks related to a specific feature
++-- api         # API requests for event management
 |
-+-- assets      # assets folder can contain all the static files for a specific feature
++-- components  # event-specific components (calendar, event cards, etc.)
 |
-+-- components  # components scoped to a specific feature
++-- hooks       # event-related hooks
 |
-+-- hooks       # hooks scoped to a specific feature
++-- routes      # event pages (list, detail, creation)
 |
-+-- routes      # route components for a specific feature pages
++-- stores      # event state management
 |
-+-- stores      # state stores for a specific feature
++-- types       # event-related type definitions
 |
-+-- types       # typescript types for TS specific feature domain
++-- utils       # event utility functions
 |
-+-- utils       # utility functions for a specific feature
-|
-+-- index.ts    # entry point for the feature, it should serve as the public API of the given feature and exports everything that should be used outside the feature
++-- index.ts    # public API for the events feature
 ```
 
-Everything from a feature should be exported from the `index.ts` file which behaves as the public API of the feature.
+## Import Guidelines
 
-You should import stuff from other features only by using:
+Always import feature components through the feature's index file:
 
-`import {AwesomeComponent} from "@/features/awesome-feature"`
+✅ Correct:
+```typescript
+import { EventCard } from "@/features/events"
+```
 
-and not
+❌ Incorrect:
+```typescript
+import { EventCard } from "@/features/events/components/EventCard"
+```
 
-`import {AwesomeComponent} from "@/features/awesome-feature/components/AwesomeComponent`
-
-This can also be configured in the ESLint configuration to disallow the later import by the following rule:
+This can be enforced through ESLint:
 
 ```js
 {
@@ -77,9 +75,8 @@ This can also be configured in the ESLint configuration to disallow the later im
                 patterns: ['@/features/*/*'],
             },
         ],
-
-    // ...rest of the configuration
+    }
 }
 ```
 
-This was inspired by how [NX](https://nx.dev/) handles libraries that are isolated but available to be used by the other modules. Think of a feature as a library or a module that is self-contained but can expose different parts to other features via its entry point.
+Each feature should be self-contained but can expose functionality to other features through its index.ts file. This structure helps maintain clean code organization as the C³ website grows. 

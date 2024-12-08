@@ -1,14 +1,21 @@
-# 🌍 Our Club Website
+# 🌍 Cloud Community Club (C³)
 
-[![Discord](https://img.shields.io/discord/939701223144185867?logo=discord)](https://discord.gg/z5P9kccwRh) ![CodeQL](https://github.com/Skyline-College-Computer-Science-Club/project.ClubWebsite/workflows/CodeQL/badge.svg) [![Vercel](https://img.shields.io/github/deployments/Skyline-College-Computer-Science-Club/project.ClubWebsite/production?&logo=vercel&label=Vercel%20Deployment)](https://github.com/Skyline-College-Computer-Science-Club/project.ClubWebsite/deployments/Production)
+[![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?logo=discord)](https://discord.gg/YOUR_INVITE_LINK) ![CodeQL](https://github.com/CloudCommunityClub/cloudcommunityclub-c3/workflows/CodeQL/badge.svg) [![Vercel](https://img.shields.io/github/deployments/CloudCommunityClub/cloudcommunityclub-c3/production?&logo=vercel&label=Vercel%20Deployment)](https://github.com/CloudCommunityClub/cloudcommunityclub-c3/deployments/Production)
 
-An informational website created by us, about us, the Computer Science Club @ Skyline College.
+Welcome to the official website repository of Cloud Community Club (C³) - a vibrant community dedicated to cloud computing enthusiasts, professionals, and learners.
 
-### 🔗 Come and visit us live @ [skycs.club](https://skycs.club) & [skycsc.vercel.app](https://skycsc.vercel.app)
+### 🔗 Visit us @ [snist.cloudcommunityclub.in](https://snist.cloudcommunityclub.in)
 
-Will serve stuff like showcases for our projects, social media links & connections, Discord + GitHub integrations, a photo album?, a _blog_?, resources and intern opportunities, and whatever else our club would want to show to the world.
+Our website serves as a central hub featuring:
+- Latest cloud computing news and trends
+- Community projects and showcases
+- Educational resources and learning paths
+- Event announcements and recordings
+- Job opportunities and internships
+- Community blog posts and technical articles
+- Photo gallery of our events and meetups
 
-🙋‍♂️ We encourage all club members to contribute in any way to our website domain!
+🙋‍♂️ We welcome contributions from all community members!
 
 ### 📊 Repository Contribution Activity
 
@@ -16,86 +23,74 @@ Will serve stuff like showcases for our projects, social media links & connectio
 
 ## 🔰 Quick Setup / Getting Started
 
-> Want to help design and add stuff to our project? Setup is easy and merely takes 5 minutes!
+> Want to contribute to our website? Setup is quick and easy!
 
-1. Clone this repository locally to your computer using [Git](https://git-scm.com/downloads).
-
-- You can do so by clicking the green `<> Code` button above, copying the URL, then using the `git clone <URL>` command in a terminal
-- Be sure to open your terminal to somewhere easy to access, like your Desktop or Documents folder.
-
-2. Open the cloned folder in an IDE of your choice. Then via your terminal, cd into the directory of said folder.
-
-- If using an external, standalone command-line shell, use the `cd` command like so:
-
-`cd Documents\project.ClubWebsite-live"`
-
-- **Alternatively, if you use VSCode**: after opening the folder, you can open a built-in Terminal (via top-left bar); it will automatically navigate itself to the currently open directory. (see below)
-
-<img src="https://github.com/Skyline-College-Computer-Science-Club/.github/blob/main/assets/tutorial_media/project.ClubWebsite/open_folder_and_terminal.gif" width=600></img>
-
-3. For this project, the only user-installed dependancy is the **[📘Node.js](https://nodejs.org/en) runtime.**
-
-4. After installing Node.js, run the following command in the directory of the downloaded project to install our project's required dependencies, which includes the Next.js framework:
-
+1. Clone this repository locally:
+```bash
+git clone https://github.com/prem22k/cloudcommunityclub-c3-.git
 ```
+
+2. Navigate to the project directory:
+```bash
+cd cloudcommunityclub-c3
+```
+
+3. Install dependencies:
+```bash
 npm install
+# or
+yarn install
 ```
 
-- We recommend installing the [yarn](https://classic.yarnpkg.com/en/docs/getting-started) package installer as well via `npm install --global yarn`!
-
-- After installation, you should now see a new folder `node_modules` with said dependancies.
-
-5. Now that we have everything we need (libraries), you can now test-run and host the website on your local computer using:
-
+4. Start the development server:
 ```bash
 npm run dev
-
-# or if you installed yarn
-
+# or
 yarn dev
 ```
 
-Steps 4 & 5 can be seen here:
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-<img src="https://github.com/Skyline-College-Computer-Science-Club/.github/blob/main/assets/tutorial_media/project.ClubWebsite/npm_install_and_run.gif" width=740></img>
+💡 The site will auto-update as you edit the files.
 
-- With it running, open http://localhost:3000 in any browser to see your locally hosted website. This URL will also be displayed to you in the terminal after running Step 5).
+## 🗃️ Tech Stack & Resources
 
-- Congrats! You can experiment now by editing the home page's components; modifying the files under `src/components`. The page auto-updates every time you save the file.
+Our website is built with modern technologies:
 
-💡 After this initial setup, you only need Step 5) when editing the project in the future.
+- [**Next.js**](https://nextjs.org) - React framework for production
+- [**React**](https://react.dev) - UI component library
+- [**Tailwind CSS**](https://tailwindcss.com) - Utility-first CSS framework
+- [**Lucide React**](https://lucide.dev) - Beautiful & consistent icons
+- [**TypeScript**](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [**Vercel**](https://vercel.com/) - Deployment and hosting platform
 
-## 🗃️ Important Resources and Documentation
+## 📚 Project Structure
 
-- Our project uses [**Node.js**](https://nodejs.org/en), the JavaScript runtime engine that powers the logic of our website.
+```
+cloudcommunityclub-c3/
+├── src/
+│   ├── app/              # App router pages
+│   ├── components/       # Reusable UI components
+│   ├── lib/             # Utility functions and configs
+│   └── styles/          # Global styles
+├── public/              # Static assets
+└── package.json         # Project dependencies
+```
 
-- Our project uses [**React.js**](https://react.dev), our website's core HTML/TypeScript-orientated structuring framework.
+For more details about the project structure, please refer to our [GUIDE.md](./GUIDE.md).
 
-- Our project uses [**Tailwind CSS**](https://tailwindcss.com), our website's core CSS styling library.
+## 📝 License
 
-- Our project uses [**Framer Motion**](https://www.framer.com/motion/), a comprehensive, production-ready animation library for React.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-- Our project uses [**Vercel**](https://vercel.com/), a cloud service that provides the infrastructure to integrate, build, scale, and deploy our website.
+## 🤝 Contributing
 
-🧠 To specifically **learn more** about Next.js, take a look at the following resources:
+We welcome contributions! Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Credits
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+See [CREDITS.md](./CREDITS.md) for a list of contributors and acknowledgments.
 
-## ⚙️ Important Technical Details
+---
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## 🔺 Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-[![https://vercel.com?utm_source=github_readme_stats_team&utm_campaign=oss](/.github/assets/powered-by-vercel.svg)](https://vercel.com?utm_source=github_readme_stats_team&utm_campaign=oss)
+[![Powered by Vercel](/.github/assets/powered-by-vercel.svg)](https://vercel.com?utm_source=cloudcommunityclub&utm_campaign=oss)
