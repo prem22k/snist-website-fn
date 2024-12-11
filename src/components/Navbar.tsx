@@ -12,7 +12,7 @@ import { FiBook } from 'react-icons/fi'
 
 import { motion } from 'framer-motion'
 
-const logo = '/assets/Designer.png'  
+const logo = '/assets/bits/sreenidhi-logo.png'  
 
 export default function Navbar(): React.ReactNode {
     const [nav, setNav] = useState(false)
@@ -28,13 +28,12 @@ export default function Navbar(): React.ReactNode {
                 transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
             >
                 <Image
-                    width={90}
-                    height={90}
+                    width={180}
+                    height={180}
                     src={logo}
-                    alt='C³ Logo'
-                    className='z-20 drop-shadow-lg ml-4 rounded-2xl hover:rotate-180 transition-transform duration-300'
-                    style={{ width: '48px' }}
-                    unoptimized
+                    alt='Snist Logo'
+                    className='my-auto'
+                    priority
                 />
 
                 {/* Desktop Navigation */}

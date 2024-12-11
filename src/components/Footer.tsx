@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { SiDiscord, SiLinkedin, SiGithub, SiMedium, SiInstagram } from 'react-icons/si'
+import { SiDiscord, SiLinkedin, SiGithub, SiInstagram } from 'react-icons/si'
+import { FaXTwitter } from 'react-icons/fa6'
 
 export default function Footer() {
     return (
@@ -49,10 +50,10 @@ export default function Footer() {
                     </button>
                 </Link>
 
-                <Link href='https://medium.com/@your-blog' target='_blank'>
-                    <button className='flex group w-full justify-center bg-neutral-700 dark:bg-neutral-900 bg-opacity-80 rounded-md gap-2 py-2 px-4 active:scale-95 hover:bg-[#000000] hover:outline-4 hover:text-white active:outline-2 hover:outline-double outline-white border-[1px] border-neutral-800 hover:outline-[#000000] active:outline-neutral-200 duration-200 active:duration-200'>
-                        <SiMedium className='my-auto group-hover:text-white' />
-                        Blog
+                <Link href='https://twitter.com/c3club' target='_blank'>
+                    <button className='flex group w-full justify-center bg-neutral-700 dark:bg-neutral-900 bg-opacity-80 rounded-md gap-2 py-2 px-4 active:scale-95 hover:bg-black hover:outline-4 hover:text-white active:outline-2 hover:outline-double outline-white border-[1px] border-neutral-800 hover:outline-neutral-700 active:outline-neutral-200 duration-200 active:duration-200'>
+                        <FaXTwitter className='my-auto group-hover:text-white' />
+                        X
                     </button>
                 </Link>
             </div>

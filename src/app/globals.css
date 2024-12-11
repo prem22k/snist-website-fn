@@ -96,3 +96,6 @@ body {
         font-family: 'Ubuntu', sans-serif;
     }
 }
+.border-gradient {
+    border-image: linear-gradient(to right, transparent, white, transparent) 1;
+  }

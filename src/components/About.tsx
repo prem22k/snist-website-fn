@@ -28,54 +28,54 @@ export default function About(): React.ReactNode {
             <Element name='about' />
 
             <div className='w-full py-24 flex flex-col lg:flex-row justify-center items-center gap-x-20 gap-y-8 bg-[#030303]'>
-                <div className='relative w-[85%] lg:w-[45%]'>
-                    <div className='absolute top-0 w-full h-[18%] bg-gradient-to-b from-[#030303] to-transparent z-10' />
-                    <div className='z-0 absolute bottom-[24px] w-full h-[18%] bg-gradient-to-t from-[#030303] to-transparent' />
-                    <div className='absolute w-full h-full bg-[radial-gradient(50%_90%_at_50%_50%,rgba(255,255,255,0)_40%,rgba(03,03,03,1)_100%)]' />
-                    
-                    {/* Aerial view video */}
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className='outline-[#030303] outline outline-4 rounded-lg'
-                    >
-                        <source src="/assets/aerial/snist_aerial.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <div className='relative w-[85%] lg:w-[45%]'>
+    <div className='absolute top-0 w-full h-[20%] bg-gradient-to-b from-[#030303] to-transparent z-10' />
+    <div className='z-0 absolute bottom-0 w-full h-[20%] bg-gradient-to-t from-[#030303] to-transparent' />
+    <div className='absolute w-full h-full bg-[radial-gradient(50%_90%_at_50%_50%,rgba(255,255,255,0)_40%,rgba(03,03,03,1)_100%)]' />
+    
+    {/* Aerial view video */}
+    <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className='w-full h-auto outline-[#030303] outline outline-4 rounded-lg'
+    >
+        <source src="/assets/home/snist_aerial.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+</div>
 
-                <div className='w-[80%] lg:w-[35%] text-sm xl:text-base'>
-                    <ReactTyped
-                        className='title-main text-base md:text-3xl font-bold text-white'
-                        strings={['Cloud Community Club (C³)']}
-                        typeSpeed={50}
-                        startWhenVisible
-                    />
-                    <h2>🌐 A Student-Driven Tech Initiative</h2>
-                    <div className='w-full h-[1px] bg-white my-3'></div>
-                    <p className='my-2'>
-                        As a newly established club, C³ aims to create a vibrant ecosystem where students can explore and excel in cloud computing and emerging technologies. We believe in bridging the gap between theoretical knowledge and practical application.
-                    </p>
-                    <p className='my-2'>
-                        Whether you're new to cloud technologies or already experienced with various platforms, our community welcomes everyone. We focus on hands-on learning, research opportunities, and real-world project experience.
-                    </p>
-                    <p className='my-2'>
-                        This is your platform to innovate, research, collaborate, and grow in the world of cloud computing and emerging technologies!
-                    </p>
-                </div>
+<div className='w-[80%] lg:w-[35%] text-sm xl:text-base'>
+    <ReactTyped
+        className='title-main text-base md:text-3xl font-bold text-white'
+        strings={['Cloud Community Club (C³)']}
+        typeSpeed={50}
+        startWhenVisible
+    />
+    <h2>🌐 A Student-Driven Tech Initiative</h2>
+    <div className='w-full h-[1px] bg-white my-3'></div>
+    <p className='my-2'>
+        As a newly established club, C³ aims to create a vibrant ecosystem where students can explore and excel in various domains of technology. We believe in bridging the gap between theoretical knowledge and practical application through hands-on experience.
+    </p>
+    <p className='my-2'>
+        Whether you're a beginner or experienced in any tech domain, our community welcomes everyone. We focus on collaborative learning, research opportunities, and real-world project experience to help you grow in your chosen field.
+    </p>
+    <p className='my-2'>
+        This is your platform to innovate, research, collaborate, and grow in the ever-evolving world of technology!
+    </p>
+</div>
             </div>
 
             <div className='w-full h-[180px] bg-[#040404]'></div>
 
             <div className='flex flex-col'>
-                <h1 className='title-main text-xl text-center sm:text-3xl font-extrabold text-white mb-10'>
-                    <span>Join us in Exploring the </span>
-                    <span className='text-yellow-300 animate-pulse drop-shadow-[0_0_10px_rgba(255,250,50,0.45)]'>
-                        Future of Cloud Technology
-                    </span>
-                </h1>
+            <h1 className='title-main text-xl text-center sm:text-3xl font-extrabold text-white mb-10'>
+    <span>Join us in Exploring the </span>
+    <span className='text-yellow-300 animate-pulse drop-shadow-[0_0_10px_rgba(255,250,50,0.45)]'>
+        Future of Technology
+    </span>
+</h1>
 
                 <div className='flex flex-row overflow-x-scroll overflow-y-visible gap-10 py-[160px] px-[20px] my-[-160px] lg:justify-center no-scrollbar'>
                     {/* CARD: Cloud Innovation */}

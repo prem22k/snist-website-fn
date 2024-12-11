@@ -1,15 +1,24 @@
 const plugin = require('tailwindcss/plugin')
-// const colors = require('tailwindcss/colors')
-
-/** @type {import('tailwindcss').Config} */
-
 import defaultTheme from 'tailwindcss/defaultTheme'
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
 
     theme: {
         extend: {
+            keyframes: {
+                heartbeat: {
+                    '0%': { transform: 'scale(1)' },
+                    '14%': { transform: 'scale(1.1)' },
+                    '28%': { transform: 'scale(1)' },
+                    '42%': { transform: 'scale(1.1)' },
+                    '70%': { transform: 'scale(1)' }
+                }
+            },
+            animation: {
+                heartbeat: 'heartbeat 2s ease-in-out infinite'
+            },
             textShadow: {
                 sm: '0 1px 2px var(--tw-shadow-color)',
                 DEFAULT: '0 2px 4px var(--tw-shadow-color)',
@@ -43,6 +52,7 @@ module.exports = {
     variants: {
         extend: {
             visibility: ['group-hover'],
+            animation: ['hover', 'focus'], // Added animation variants
         },
     },
 
