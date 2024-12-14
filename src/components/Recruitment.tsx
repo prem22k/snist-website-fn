@@ -15,11 +15,11 @@ export default function Recruitment(): React.ReactNode {
             <div className='absolute bottom-0 w-full h-[30%] bg-gradient-to-t from-[#0a0a0a] to-transparent' />
 
             <Image
-                src='/assets/home/space.jpg'
+                src='/assets/home/spaces.jpg'
                 width={1600}
                 height={1600}
-                alt='Cloud computing background'
-                className='-z-10 object-cover aspect-auto absolute w-full h-full opacity-[30%]'
+                alt='Cloud community background'
+                className='-z-10 object-cover aspect-auto absolute w-full h-full opacity-[50%]'
                 priority
             />
 

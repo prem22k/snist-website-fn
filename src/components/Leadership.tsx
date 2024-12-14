@@ -60,7 +60,6 @@ const LeaderCard: React.FC<props_LeaderCard> = ({
                 onMouseUp={() => playSfx_clunk()}
             >
                 <div className='absolute inset-0 bg-black/50 flex items-center justify-center'>
-                    <p className='text-[#86f446] font-semibold animate-pulse'>Coming Soon</p>
                 </div>
                 <div className='w-full h-full bg-gradient-to-b from-[#1f3f0d] to-black' />
             </div>
@@ -70,7 +69,6 @@ const LeaderCard: React.FC<props_LeaderCard> = ({
                     {leaderName}
                 </h1>
                 <h2 className='text-[13px] sm:text-[15px] font-semibold text-center drop-shadow-[0_0_8px_rgba(255,255,255,0.2)]'>
-                    Position Opening Soon
                 </h2>
             </div>
         </motion.div>
@@ -79,11 +77,16 @@ const LeaderCard: React.FC<props_LeaderCard> = ({
 
 export default function Leadership(): React.ReactNode {
     const positions = [
-        "Club President",
+        "President",
         "Vice President",
-        "Cloud Infrastructure Lead",
-        "DevOps Lead",
-        "Community Manager"
+        "General Secretary",
+        "Community Manager",
+        "Technical Head",
+        "Research & Development Head",
+        "Organizing Head",
+        "Designing Head",
+        "Marketing Head",
+        "Documentation Head"
     ]
 
     return (

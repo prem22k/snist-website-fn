@@ -90,7 +90,7 @@ const TECHNOLOGIES: { [key: string]: JSX.Element } = {
     'Jenkins': (
         <SiJenkins
             color='#D24939'
-            className={TECH_ICON_CLASSES}
+            className={TECH_ICON_CLASSES} 
             style={TECH_ICON_SHADOW}
         />
     ),

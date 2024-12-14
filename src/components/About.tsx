@@ -187,7 +187,7 @@ export default function About(): React.ReactNode {
                             <p className='text-sm text-center py-2 px-8 leading-6'>
                                 Engage in <b>research-driven activities</b> and contribute to{' '}
                                 <b>open-source projects</b>. Collaborate on publishing papers and developing solutions for{' '}
-                                <b>real-world challenges</b> in cloud computing.
+                                <b>real-world challenges</b> in emerging tech.
                             </p>
                         </div>
                     </motion.div>
@@ -242,9 +242,9 @@ export default function About(): React.ReactNode {
                                 </span>
                             </h1>
                             <p className='text-sm text-center py-2 px-8 leading-6'>
-                                Network with <b>industry experts</b> and gain insights into the cloud computing industry. Access{' '}
-                                <b>mentorship opportunities</b> and build connections for your future career in{' '}
-                                <b>cloud technology</b>.
+                            Network with <b>industry leaders</b> and gain insights into the evolving tech landscape. Access{' '}
+                            <b>mentorship opportunities</b> and build connections for your future career in{' '}
+                            <b>cutting-edge innovation</b>.
                             </p>
                         </div>
 

@@ -1,7 +1,5 @@
 'use client'
 
-import Gallery from '../../components/Gallery'
-import { HackathonAlbum } from '../../dispositions/gallery'
 
 import IntroFade from '../../components/IntroFade'
 
@@ -186,7 +184,6 @@ export default function Hackathon() {
                     ></ReactTyped>
                 </h1>
 
-                <Gallery album={HackathonAlbum} />
             </div>
         </>
     )
