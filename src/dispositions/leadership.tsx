@@ -24,7 +24,6 @@ import { FaRegHandPeace } from 'react-icons/fa'
 import { LuConstruction } from 'react-icons/lu'
 
 import { AiOutlineGlobal } from 'react-icons/ai'
-import { MdOutlineEmojiEvents } from 'react-icons/md'
 
 import { PiFeatherDuotone, PiHandshakeBold } from 'react-icons/pi'
 

@@ -3,13 +3,9 @@
 import React, { useState } from 'react'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 
-import { BiLogoTypescript, BiCalendarStar } from 'react-icons/bi'
+import { projects, getProjectByName } from '../dispositions/projects'
 
-import { projects, Project, getProjectByName } from '../dispositions/projects'
-
-const fallBackdrop = '/assets/projects/backdrops/mw2.mp4'
 
 export default function Carousel(): React.ReactNode {
     const [currentProject, setCurrentProject] = useState<string>(

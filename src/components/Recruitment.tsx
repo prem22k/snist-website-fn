@@ -1,11 +1,8 @@
 'use client'
 
-import { Element } from 'react-scroll'
 import Image from 'next/image'
 
 const logo = '/assets/Designer.png'
-import { FaWhatsapp } from 'react-icons/fa'
-import { SiGoogleforms } from 'react-icons/si'
 
 export default function Recruitment(): React.ReactNode {
     return (

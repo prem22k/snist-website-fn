@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Link } from 'react-scroll'
 import { FaGithub, FaDiscord, FaLinkedin } from 'react-icons/fa'
 import { SiMedium } from 'react-icons/si'
 
