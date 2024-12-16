@@ -3,7 +3,7 @@
 import { Element } from 'react-scroll'
 import Image from 'next/image'
 
-const logo = '/assets/designer.png'
+const logo = '/assets/Designer.png'
 import { FaWhatsapp } from 'react-icons/fa'
 import { SiGoogleforms } from 'react-icons/si'
 
