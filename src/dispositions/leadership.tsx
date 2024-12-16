@@ -32,11 +32,9 @@ const dir_leaderPortraits = '/assets/home/leader_portraits/'
 const pfp_president = dir_leaderPortraits + 'tylerkuwadaport.png'
 const pfp_vicepresident = dir_leaderPortraits + 'nikhilanand.png'
 const pfp_secretary = dir_leaderPortraits + 'vasalaharshitha.png'
-const pfp_community = dir_leaderPortraits + 'jayanpintorport.png'
+const pfp_community = dir_leaderPortraits + 'vamanakhil.png'
 const pfp_technical = dir_leaderPortraits + 'srinivasg.png'
-
-const pfp_rdhead = dir_leaderPortraits + 'christseport.png'
-
+const pfp_rdhead = dir_leaderPortraits + 'harshanvarma.png'
 const pfp_organizing = dir_leaderPortraits + 'santoshkammari.png'
 const pfp_designing = dir_leaderPortraits + 'sivamaruthi.png'
 const pfp_marketing = dir_leaderPortraits + 'vasundara.png'
@@ -92,17 +90,14 @@ export const leadership = {
             imgSrc: pfp_community,
             quote: (
                 <p>
-                    We all live in a coded world of if-statements... never knowing
-                    the conditions of each until interpretation.
+                    “Building bridges between ideas and innovation.”
                 </p>
             ),
-            linktree: '',
-            instagram: '',
-            discord: '',
-            github: '',
-            linkedin: '',
-            website: '',
-            icon: <GrMoney />,
+            instagram: 'https://www.instagram.com/vamanakhil/',
+            github: 'https://github.com/Vamanakhil',
+            linkedin: 'https://www.linkedin.com/in/vaman-akhil-b47604243/',
+            website: 'https://akhilon.dev/',
+            icon: <FaRegHandPeace />,
         },
         'Srinivas G': {
             role: 'Technical Head',
@@ -120,16 +115,12 @@ export const leadership = {
             imgSrc: pfp_rdhead,
             quote: ( 
                 <p>
-                    A true Isaiah Rashad fan.
+                    One who rules with his left rules the world
                 </p>
             ),
-            linktree: '',
-            instagram: '',
-            discord: '',
-            github: '',
-            linkedin: '',
-            website: '',
-            icon: <FaRegHandPeace />,
+            instagram: 'https://www.instagram.com/varma_harshan/',
+            linkedin: 'https://www.linkedin.com/in/harshanvarma17/',
+            icon: <PiHandshakeBold />,
         },
         'Santhosh': {
             role: 'Organizing Head',
@@ -149,7 +140,7 @@ export const leadership = {
          'B Vasundara': {
              role: 'Marketing Head',
              imgSrc: pfp_marketing,
-             quote: 'I’m not a psychopath, I’m a high-functioning sociopath ',
+             quote: 'To let the brain work without sufficient material is like racing an engine. It racks itself to pieces.',
              instagram: 'https://www.instagram.com/bv_894',
              linkedin: 'https://www.linkedin.com/in/b-vasundara-678b86253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
              icon: <PiHandshakeBold />,
@@ -171,8 +162,6 @@ export const leadership = {
             icon: <AiOutlineGlobal />,
         },
     },
-    
-    
 }
 
 export default leadership

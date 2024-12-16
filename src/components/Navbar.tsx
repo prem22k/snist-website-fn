@@ -111,7 +111,7 @@ export default function Navbar(): React.ReactNode {
 
                     <li className='text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
                         <GoCodeOfConduct className='my-auto mr-2' />
-                        <ScrollLink to='recruitment' offset={-120} smooth={true} duration={1500}>Join Us!</ScrollLink>
+                        <Link href='/'>Join Us</Link>
                     </li>
                 </ul>
 
