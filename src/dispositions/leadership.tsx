@@ -70,8 +70,9 @@ export const leadership = {
             role: 'Vice President',
             imgSrc: pfp_vicepresident,
             quote: <p>The future is digital.</p>,
+            instagram: 'https://www.instagram.com/_nikhillanand/',
+            github: 'https://github.com/NIKHIL-CAT',
             linkedin: 'https://www.linkedin.com/in/nikhil-anand-94948a25a/',
-            instagram: 'https://www.instagram.com/_.waffly._/',
             icon: <CgCrown />,
         },
         'Harshitha V': {
