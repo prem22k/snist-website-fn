@@ -32,15 +32,15 @@ const dir_leaderPortraits = '/assets/home/leader_portraits/'
 
 const pfp_president = dir_leaderPortraits + 'tylerkuwadaport.png'
 const pfp_vicepresident = dir_leaderPortraits + 'nikhilanand.png'
-const pfp_secretary = dir_leaderPortraits + 'kailabautistaport.png'
+const pfp_secretary = dir_leaderPortraits + 'vasalaharshitha.png'
 const pfp_community = dir_leaderPortraits + 'jayanpintorport.png'
-const pfp_technical = dir_leaderPortraits + 'lanceruizport.jpg'
+const pfp_technical = dir_leaderPortraits + 'srinivasg.png'
 
 const pfp_rdhead = dir_leaderPortraits + 'christseport.png'
 
-const pfp_organizing = dir_leaderPortraits + 'denisehumport.png'
-const pfp_designing = dir_leaderPortraits + 'bryanswartoutport.png'
-const pfp_marketing = dir_leaderPortraits + 'bryanswartoutport.png'
+const pfp_organizing = dir_leaderPortraits + 'santoshkammari.png'
+const pfp_designing = dir_leaderPortraits + 'sivamaruthi.png'
+const pfp_marketing = dir_leaderPortraits + 'vasundara.png'
 const pfp_document = dir_leaderPortraits + 'bhargavi.png'
 const pfp_none = dir_leaderPortraits + 'noprofile.webp'
 
@@ -73,7 +73,6 @@ export const leadership = {
             role: 'Vice President',
             imgSrc: pfp_vicepresident,
             quote: <p>The future is digital.</p>,
-            linktree: '',
             linkedin: 'https://www.linkedin.com/in/nikhil-anand-94948a25a/',
             instagram: 'https://www.instagram.com/_.waffly._/',
             icon: <CgCrown />,
@@ -86,7 +85,6 @@ export const leadership = {
                     Building, Breaking and Learning.
                 </p>
             ),
-            linktree: '',
             linkedin: 'https://www.linkedin.com/in/vasala-harshitha-bb15952a3/',
             icon: <PiFeatherDuotone />,
         },
@@ -115,12 +113,7 @@ export const leadership = {
                    First, solve the problem. Then, write the code.
                 </p>
             ),
-            linktree: '',
-            instagram: '',
-            discord: '',
-            github: '',
-            linkedin: '',
-            website: '',
+            website: 'https://blog.srinivasgogula.me/',
             icon: <LuConstruction />,
         },
         'Harshan Varma': {
@@ -142,20 +135,14 @@ export const leadership = {
         'Santhosh': {
             role: 'Organizing Head',
             imgSrc: pfp_organizing,
-            quote: 'Data are summaries of thousands of stories. Tell a few of those stories to help make the data meaningful.',
-            linktree: '',
-            instagram: '',
-            discord: '',
-            github: '',
-            linkedin: '',
-            website: '',
+            quote: 'Behind the scenes, ahead of the game.',
+            linkedin: 'https://www.linkedin.com/in/kammari-santosh-kumar',
             icon: <PiHandshakeBold />,
         },
         'T Siva Maruthi Ganesh': {
             role: 'Designing Head',
             imgSrc: pfp_designing,
             quote: 'One step at a time.',
-            linktree: '',
             instagram: 'https://www.instagram.com/tsmg_125/',
             linkedin: 'https://www.linkedin.com/in/maruthi-ganesh-929988258/',
             icon: <PiHandshakeBold />,
@@ -164,9 +151,7 @@ export const leadership = {
              role: 'Marketing Head',
              imgSrc: pfp_marketing,
              quote: 'I’m not a psychopath, I’m a high-functioning sociopath ',
-             linktree: '',
-             instagram: 'https://www.instagram.com/bv_894?igsh=MXJvY2poMW9mcG53Nw==',
-             github: '',
+             instagram: 'https://www.instagram.com/bv_894',
              linkedin: 'https://www.linkedin.com/in/b-vasundara-678b86253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
              icon: <PiHandshakeBold />,
          },
@@ -174,11 +159,9 @@ export const leadership = {
          'Bhargavi': {
             role: 'Documentation Head',
             imgSrc: pfp_document,
-            quote: 'I’m not a psychopath, I’m a high-functioning sociopath ',
-            linktree: '',
-            instagram: 'https://www.instagram.com/bv_894?igsh=MXJvY2poMW9mcG53Nw==',
-            github: '',
-            linkedin: 'https://www.linkedin.com/in/b-vasundara-678b86253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+            quote: 'Be the way you are',
+            instagram: 'https://www.instagram.com/bhargavi_amidhepuram',
+            linkedin: 'https://www.linkedin.com/in/bhargavi-harshini-amidhepuram',
             icon: <PiHandshakeBold />,
         },
     },
@@ -187,16 +170,6 @@ export const leadership = {
             label: 'Prem Sai K',
             color_complex: 'from-[#1eb0b0] shadow-[#1eb0b0]',
             icon: <AiOutlineGlobal />,
-        },
-        'Social Outreach': {
-            label: 'Chris Tse & Kaila Bautista',
-            color_complex: 'from-[#651e94] shadow-[#651e94]',
-            icon: <PiHandshakeBold />,
-        },
-        'Event Planners': {
-            label: 'Tyler Kuwada & Lance Ruiz',
-            color_complex: 'from-[#9c710c] shadow-[#9c710c]',
-            icon: <MdOutlineEmojiEvents />,
         },
     },
 }

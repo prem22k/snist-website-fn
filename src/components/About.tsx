@@ -38,7 +38,7 @@ export default function About(): React.ReactNode {
     
                 {/* Aerial view video */}
                 <video
-                        src='/assets/home/snist.mp4'
+                        src='/assets/home/aerial.mp4'
                         className='outline-[#030303] outline outline-4 rounded-lg'
                         preload='auto'
                         autoPlay
