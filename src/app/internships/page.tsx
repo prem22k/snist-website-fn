@@ -130,7 +130,7 @@ export default function InternshipsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [internships] = useState<Internship[]>(internshipsData)
   const [categories] = useState<string[]>(categoriesData)
-  
+
   // State for lightbox/modal
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [lightboxImage, setLightboxImage] = useState({ src: '', alt: '' })

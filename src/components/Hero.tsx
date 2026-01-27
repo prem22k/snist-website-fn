@@ -34,7 +34,7 @@ const TYPED_KEYWORDS = [
     '$ docker build',
 ]
 
-const logo = '/assets/ccc_logo.webp'
+const logo = '/assets/Designer.webp'
 const backdrop = '/assets/home/snist_backdrop1.webp'
 
 export default function Hero(): React.ReactNode {
@@ -45,8 +45,7 @@ export default function Hero(): React.ReactNode {
             {/* Background Images */}
             <div className='absolute w-full h-full pointer-events-none overflow-hidden'>
                 <div className='w-full h-full'>
-                    {/* Backdrop with slightly increased darkness */}
-                    <div className='absolute inset-0 bg-black bg-opacity-40' />
+
 
                     <Image
                         width={1920}
@@ -65,12 +64,15 @@ export default function Hero(): React.ReactNode {
                         muted
                         playsInline
                         className="absolute top-0 w-full h-full object-cover z-0"
-                        style={{ opacity: 0.3, mixBlendMode: 'overlay' }}
+                        style={{ opacity: 0.7, mixBlendMode: 'overlay' }}
                     >
                         <source src="/assets/home/hero_overlay.webm" type="video/webm" />
                         <source src="/assets/home/hero_overlay.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
+
+                    {/* Dark Overlay for improved text contrast */}
+                    <div className='absolute inset-0 bg-black/50 z-10' />
                 </div>
             </div>
 
@@ -112,7 +114,7 @@ export default function Hero(): React.ReactNode {
                             />
                         </Suspense>
                         {' '}
-                        {'<'}
+                        <span className="text-[#00A0DC] inline-block animate-pulse">{'<'}</span>
                     </h1>
                 </div>
 

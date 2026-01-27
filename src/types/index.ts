@@ -1,4 +1,4 @@
-import { ComponentType } from 'react'
+import { ComponentType, ReactNode } from 'react'
 
 export interface Activity {
     title: string
@@ -17,7 +17,7 @@ export interface Project {
 }
 
 export interface ResearchArea {
-    icon: JSX.Element
+    icon: ReactNode
     title: string
     description: string
 }

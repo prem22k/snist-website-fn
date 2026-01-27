@@ -44,7 +44,7 @@ const TECH_TEXT_CLASSES = 'title-main my-auto mx-10 font-semibold text-xl md:tex
 const TECH_ICON_CLASSES = 'my-auto w-[60px] md:w-[72px] h-full'
 const TECH_ICON_SHADOW = { filter: 'drop-shadow(4px 4px 2px rgba(0, 0, 0, 1))' }
 
-const TECHNOLOGIES: { [key: string]: JSX.Element } = {
+const TECHNOLOGIES: { [key: string]: React.ReactNode } = {
     'AWS': (
         <SiAmazon
             color='#FF9900'

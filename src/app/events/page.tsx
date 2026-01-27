@@ -113,16 +113,11 @@ const pastEvents: Event[] = [
             "Hands-on installs and demos",
             "Collaboration with Swecha"
         ],
-        tags: ["FOSS", "Open Source", "Privacy", "Community"]
-    }
-]
-
-// Upcoming Events Data
-const upcomingEvents: Event[] = [
+    },
     {
-        "id": "1",
+        "id": "5",
         "title": "Tech Samyog – 3-Day Hands-on Workshop at SNIST",
-        "date": "October 22 - 24",
+        "date": "October 22 - 24, 2025",
         "time": "10:00 AM - 4:00 PM",
         "location": "Biotech Seminar Hall, SNIST",
         "description": "Tech Samyog is a 3-day hands-on workshop organized by (Sree GLUG) Sreenidhi Linux Users Group in collaboration with Cloud Community Club (C³-SNIST). This workshop is designed to help students explore the open-source ecosystem, gain a practical understanding of AI Engineering, and bridge the gap between academia and industry through real-world, project-based learning.\n\nThe sessions are open to students from all departments, with flexible attendance — participants may join any day of interest. However, Day 3 is highly recommended as it includes the final build session, where students apply everything they've learned.",
@@ -143,6 +138,10 @@ const upcomingEvents: Event[] = [
         "tags": ["Workshop", "AI", "Open Source", "Linux", "Git", "Hands-on", "APIs", "Agentic AI", "LLMs", "FOSS", "Ollama"]
     }
 ]
+
+// Upcoming Events Data
+const upcomingEvents: Event[] = []
+
 
 // Animation variants
 const fadeInUp = {
@@ -537,6 +536,7 @@ const EventsClient = () => {
                         priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/70 to-black" />
+                    <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] [background-size:16px_16px] opacity-20" />
                 </div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -572,8 +572,8 @@ const EventsClient = () => {
                         <button
                             onClick={() => setActiveTab('upcoming')}
                             className={`px-6 py-2 rounded-lg transition-all duration-300 flex items-center ${activeTab === 'upcoming'
-                                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/30'
-                                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                                ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/30'
+                                : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
                                 }`}
                         >
                             <Calendar className="w-5 h-5 mr-2" />
@@ -582,8 +582,8 @@ const EventsClient = () => {
                         <button
                             onClick={() => setActiveTab('past')}
                             className={`px-6 py-2 rounded-lg transition-all duration-300 flex items-center ${activeTab === 'past'
-                                    ? 'bg-gray-700 text-white shadow-lg shadow-gray-900/30'
-                                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                                ? 'bg-gray-700 text-white shadow-lg shadow-gray-900/30'
+                                : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
                                 }`}
                         >
                             <Clock className="w-5 h-5 mr-2" />
@@ -606,24 +606,28 @@ const EventsClient = () => {
                         {upcomingEvents.length === 0 ? (
                             <motion.div
                                 variants={fadeInUp}
-                                className="text-center py-16 bg-gray-900/30 rounded-xl border border-gray-800 backdrop-blur-sm"
+                                className="relative text-center py-20 px-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden"
                             >
-                                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-blue-900/20 flex items-center justify-center">
-                                    <Calendar className="w-10 h-10 text-blue-400" />
+                                <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-transparent pointer-events-none" />
+                                <div className="relative z-10 flex flex-col items-center">
+                                    <div className="w-24 h-24 mb-6 rounded-full bg-gradient-to-tr from-blue-900/40 to-cyan-900/40 border border-white/10 flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                                        <Calendar className="w-10 h-10 text-cyan-400" />
+                                    </div>
+                                    <h3 className="text-3xl font-bold text-white mb-4">Stay Tuned!</h3>
+                                    <p className="text-neutral-400 max-w-lg mx-auto mb-8 text-lg">
+                                        We're crafting our next big event. Join our community to get instant updates and be part of the conversation.
+                                    </p>
+                                    <a
+                                        href="https://discord.gg/dBNXWDKhrD"
+                                        className="group relative inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/30 overflow-hidden"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                                        <span className="font-semibold">Join Discord Community</span>
+                                        <ExternalLink className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                                    </a>
                                 </div>
-                                <h3 className="text-2xl font-semibold text-white mb-4">No Upcoming Events</h3>
-                                <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-                                    We're currently planning our next events. Check back soon or join our Discord to be the first to know!
-                                </p>
-                                <a
-                                    href="https://discord.gg/dBNXWDKhrD"
-                                    className="inline-flex items-center px-6 py-3 bg-blue-800/30 hover:bg-blue-800/50 text-white rounded-lg transition-all duration-300"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Join Our Discord
-                                    <ExternalLink className="w-4 h-4 ml-2" />
-                                </a>
                             </motion.div>
                         ) : (
                             upcomingEvents.map((event) => (
@@ -725,7 +729,7 @@ const EventsClient = () => {
                         initial="hidden"
                         animate="visible"
                         variants={staggerContainer}
-                        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
                     >
                         {pastEvents.map((event) => (
                             <motion.div
@@ -733,91 +737,61 @@ const EventsClient = () => {
                                 variants={fadeInUp}
                                 initial="rest"
                                 whileHover="hover"
-                                className="group bg-gradient-to-br from-gray-900/70 to-black backdrop-blur-sm rounded-xl overflow-hidden shadow-xl border border-gray-800 hover:border-gray-600 transition-all duration-300"
+                                onClick={() => openEventDetails(event)}
+                                className="group relative bg-[#0a0a0a] rounded-2xl overflow-hidden border border-white/5 hover:border-cyan-500/30 transition-all duration-500 hover:shadow-[0_0_30px_rgba(6,182,212,0.1)] cursor-pointer"
                             >
-                                <motion.div variants={cardHover}>
-                                    <div className="relative h-48 overflow-hidden">
+                                <motion.div variants={cardHover} className="h-full flex flex-col">
+                                    {/* Image Container */}
+                                    <div className="relative h-56 overflow-hidden">
                                         <Image
                                             src={event.image}
                                             alt={event.title}
                                             fill
-                                            className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                                            className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-90" />
 
-                                        {/* Event tags */}
-                                        <div className="absolute top-3 right-3 flex flex-wrap gap-2 justify-end">
-                                            {event.tags && event.tags.map((tag, index) => (
+                                        {/* Date Badge */}
+                                        <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-2">
+                                            <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+                                            <span className="text-xs font-mono text-white">{event.date.split(',')[0]}</span>
+                                        </div>
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="p-6 flex-grow flex flex-col relative">
+                                        {/* Glow effect */}
+                                        <div className="absolute -top-10 left-0 right-0 h-20 bg-gradient-to-b from-black to-transparent pointer-events-none" />
+
+                                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors line-clamp-2">
+                                            {event.title}
+                                        </h3>
+
+                                        <div className="flex items-center text-neutral-400 text-xs mb-4 gap-4">
+                                            <div className="flex items-center">
+                                                <Clock className="w-3.5 h-3.5 mr-1.5 text-cyan-600" />
+                                                {event.time.split('-')[0]}
+                                            </div>
+                                            <div className="flex items-center">
+                                                <MapPin className="w-3.5 h-3.5 mr-1.5 text-cyan-600" />
+                                                <span className="truncate max-w-[120px]">SNIST</span>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-neutral-500 mb-6 text-sm line-clamp-3 leading-relaxed">
+                                            {event.description}
+                                        </p>
+
+                                        {/* Footer tags */}
+                                        <div className="mt-auto flex flex-wrap gap-2">
+                                            {event.tags && event.tags.slice(0, 3).map((tag, index) => (
                                                 <span
                                                     key={index}
-                                                    className="px-2 py-1 bg-gray-800/90 text-white text-xs font-medium rounded-full shadow-lg shadow-black/30"
+                                                    className="px-2.5 py-1 bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white text-[10px] uppercase tracking-wider font-semibold rounded-md border border-white/5 transition-colors"
                                                 >
                                                     {tag}
                                                 </span>
                                             ))}
-                                        </div>
-
-                                        <div className="absolute bottom-0 left-0 right-0 p-4">
-                                            <h3 className="text-xl font-bold text-white mb-1 group-hover:text-gray-200 transition-colors">
-                                                {event.title}
-                                            </h3>
-                                            <div className="flex items-center text-gray-300 text-sm">
-                                                <Calendar className="w-3 h-3 mr-1 text-gray-400" />
-                                                {event.date}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="p-4">
-                                        <div className="flex flex-wrap gap-3 mb-3 text-gray-400 text-xs">
-                                            <div className="flex items-center">
-                                                <Clock className="w-3 h-3 mr-1 text-gray-500" />
-                                                {event.time}
-                                            </div>
-                                            <div className="flex items-center">
-                                                <MapPin className="w-3 h-3 mr-1 text-gray-500" />
-                                                {event.location}
-                                            </div>
-                                        </div>
-
-                                        <p className="text-gray-400 mb-4 text-sm line-clamp-2">
-                                            {event.description}
-                                        </p>
-
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {event.highlights && event.highlights.slice(0, 2).map((highlight, index) => (
-                                                <div
-                                                    key={index}
-                                                    className="bg-gray-900/50 px-2 py-1 rounded text-gray-400 text-xs border border-gray-800"
-                                                >
-                                                    {highlight}
-                                                </div>
-                                            ))}
-                                            {event.highlights && event.highlights.length > 2 && (
-                                                <div className="bg-gray-900/50 px-2 py-1 rounded text-gray-400 text-xs border border-gray-800">
-                                                    +{event.highlights.length - 2} more
-                                                </div>
-                                            )}
-                                        </div>
-
-                                        <div className="flex justify-between items-center">
-                                            {event.gallery && event.gallery.length > 0 && (
-                                                <button
-                                                    onClick={() => openGallery(event.gallery || [], event.title)}
-                                                    className="flex items-center text-blue-400 hover:text-blue-300 text-sm"
-                                                >
-                                                    <Camera className="w-4 h-4 mr-1" />
-                                                    View Gallery
-                                                </button>
-                                            )}
-
-                                            <button
-                                                onClick={() => openEventDetails(event)}
-                                                className="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-300 text-sm"
-                                            >
-                                                Details
-                                                <ChevronRight className="w-3 h-3 ml-1" />
-                                            </button>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -825,6 +799,7 @@ const EventsClient = () => {
                         ))}
                     </motion.div>
                 )}
+
             </div>
 
             {/* Gallery Modal */}
@@ -845,8 +820,8 @@ const EventsClient = () => {
                 />
             )}
         </div>
-    )
-}
+    );
+};
 
 // Server component
 export default function Events() {

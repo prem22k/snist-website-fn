@@ -8,8 +8,8 @@ import Link from 'next/link'
 import { HiOutlineCloud } from 'react-icons/hi2'
 import { GoHome, GoCodeOfConduct } from 'react-icons/go'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { FiBook } from 'react-icons/fi'
-import { MdOutlineEmojiEvents, MdOutlineWorkOutline } from 'react-icons/md'
+import { FiBook, FiEdit } from 'react-icons/fi'
+import { MdOutlineEmojiEvents, MdOutlineWorkOutline, MdGroupAdd } from 'react-icons/md'
 import { motion } from 'framer-motion'
 
 import { ANNOUNCEMENT_TEXT, ANNOUNCEMENT_GRAD_COLOR } from '@/dispositions/general'
@@ -111,9 +111,9 @@ export default function Navbar(): React.ReactNode {
                     </li>
 
                     <li className='text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
-                        <Link href='/research' className='flex items-center'>
-                            <FiBook className='my-auto mr-2 text-xl' />
-                            Research
+                        <Link href='/blogs' className='flex items-center'>
+                            <FiEdit className='my-auto mr-2 text-xl' />
+                            Blogs
                         </Link>
                     </li>
 
@@ -121,6 +121,13 @@ export default function Navbar(): React.ReactNode {
                         <Link href='/internships' className='flex items-center'>
                             <MdOutlineWorkOutline className='my-auto mr-2 text-xl' />
                             Internships
+                        </Link>
+                    </li>
+
+                    <li className='text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
+                        <Link href='/recruitment' className='flex items-center'>
+                            <MdGroupAdd className='my-auto mr-2 text-xl' />
+                            Recruitment
                         </Link>
                     </li>
 
@@ -174,9 +181,9 @@ export default function Navbar(): React.ReactNode {
                         </div>
 
                         <div className='text-2xl text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
-                            <FiBook className='my-auto mr-2 text-2xl' />
-                            <Link href='/research' onClick={handleClick}>
-                                Research
+                            <FiEdit className='my-auto mr-2 text-2xl' />
+                            <Link href='/blogs' onClick={handleClick}>
+                                Blogs
                             </Link>
                         </div>
 
@@ -184,6 +191,13 @@ export default function Navbar(): React.ReactNode {
                             <MdOutlineWorkOutline className='my-auto mr-2 text-2xl' />
                             <Link href='/internships' onClick={handleClick}>
                                 Internships
+                            </Link>
+                        </div>
+
+                        <div className='text-2xl text-white font-semibold flex active:scale-90 hover:scale-105 transition duration-300 ease-out'>
+                            <MdGroupAdd className='my-auto mr-2 text-2xl' />
+                            <Link href='/recruitment' onClick={handleClick}>
+                                Recruitment
                             </Link>
                         </div>
 

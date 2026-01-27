@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         siteName: 'Cloud Community Club',
         images: [
             {
-                url: '/og-image.jpg',
+                url: '/ccc_logo.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Cloud Community Club (C³)'

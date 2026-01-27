@@ -409,7 +409,7 @@ export default function Leadership(): React.ReactNode {
                 <div className='w-full text-4xl font-semibold border-b-2 border-[#345222] mb-2 drop-shadow-[0_0_30px_rgba(50,255,50,1)]'></div>
 
                 {/* Major Leadership Role Cards */}
-                <div className='flex flex-row flex-wrap justify-center align-middle gap-x-4 sm:gap-x-7 gap-y-[18px] group/majorcards'>
+                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-7 gap-y-[18px] justify-items-center max-w-7xl mx-auto'>
                     {Object.keys(leadership.major).map(
                         (majorLeaderName, index) => (
                             <MajorLeaderCard
@@ -422,15 +422,14 @@ export default function Leadership(): React.ReactNode {
                 </div>
 
                 {/* Minor Leadership Role Cards */}
-                <div className='flex flex-row flex-wrap justify-center align-middle mt-8 mb-4'>
+                <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center mt-8 mb-4 max-w-7xl mx-auto'>
                     {Object.keys(leadership.minor).map(
                         (minorLeaderRoleName, index) => (
-                            <div key={minorLeaderRoleName + index} className="relative h-[280px] w-[200px] sm:w-[240px] flex items-center justify-center">
-                                <MinorLeaderCard
-                                    index={index}
-                                    roleName={minorLeaderRoleName}
-                                />
-                            </div>
+                            <MinorLeaderCard
+                                key={minorLeaderRoleName + index}
+                                index={index}
+                                roleName={minorLeaderRoleName}
+                            />
                         )
                     )}
                 </div>
